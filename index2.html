@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Event Handling Example</title>
+</head>
+<body style="background:#F5F2F2FF">
+  <h2>Click the Button Below</h2>
+  <button id="myButton">Click Me!</button>
+  <p id="demo"></p>
+  <script>
+    // JavaScript will go here
+    document.getElementById("myButton").addEventListener("click", function() {
+  document.getElementById("demo").innerHTML = "You triggered a click event! :rocket:";
+});
+  </script>
+</body>
+</html>
