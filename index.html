@@ -1,18 +1,53 @@
-<!DOCTYPE html>
 <html>
-    <head>
-    <title> Button Click Example</title>
-    </head>
-    <body style="background:#ffffff">
-        <h2> My First <Button> Click</h2>
+<head>
+  <title>My Dark Mode</title>
+  <style>
+    body {
+      background: #13171A;
+      color: #F6F7F8;
+      transition: background 0.3s, color 0.3s;
+    }
+    body.light-mode {
+      background: #F6F7F8;
+      color: #13171A;
+    }
+    button {
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h2>Dark Mode Example</h2>
+  <button onclick="toggleMode()" id="modeBtn">:new_moon_with_face: Dark Mode</button>
+  <p>This is my text!</p>
+  <script>
+    function toggleMode() {
+      document.body.classList.toggle('light-mode');
+      const btn = document.getElementById("modeBtn");
+      if (document.body.classList.contains('light-mode')) {
+        btn.innerText = ":sun_with_face: Light Mode";
+      } else {
+        btn.innerText = ":new_moon_with_face: Dark Mode";
+      }
+    }
+  </script>
 
-            <button onclick="showMessage()">Click Me!</button>
-
-            <p id="demo"></p>
-
-            <script>
-              function.showMessage() { document.getElementById("demo").innerHTML = "Hello, clicked the button!";
-            </script>
-        }
-            </body>
-            </html>
+  <!-- ANOTHER FILE -->
+</body>
+</html>
+<html>
+<head>
+  <title>Event Handling Example</title>
+</head>
+<body style="background:rgb(0, 0, 0)">
+  <h2>Click the Button Below</h2>
+  <button id="myButton">Click Me!</button>
+  <p id="demo"></p>
+  <script>
+    // JavaScript will go here
+    document.getElementById("myButton").addEventListener("click", function() {
+  document.getElementById("demo").innerHTML = "You triggered a click event! :rocket:";
+});
+  </script>
+</body>
+</html>
