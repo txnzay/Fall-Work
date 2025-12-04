@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Modal Example</title>
+</head>
+<body style="background:#13171A; color:#F6F7F8;">
+
+<button onclick="openModal()">Show Modal!</button>
+
+<div id="modalBackdrop" style="display:none;position:fixed;z-index:2000;left:0;top:0;width:100vw;height:100vh;background:rgba(0,0,0,0.8);">
+  <div style="background:#191d1f;padding:2em 1.5em;border-radius:20px;max-width:350px;margin:100px auto;">
+    <p>This is a modal pop-up!</p>
+    <button onclick="closeModal()">Close</button>
+  </div>
+</div>
+
+<script>
+  function openModal() {
+    document.getElementById('modalBackdrop').style.display = 'block';
+  }
+  function closeModal() {
+    document.getElementById('modalBackdrop').style.display = 'none';
+  }
+</script>
+
+</body>
+</html>
+
+
+
+
+
