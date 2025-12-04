@@ -1,25 +1,18 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Form Submission Example</title>
-</head>
-<body style="background:#0c0c0c">
+    <head>
+    <title> Button Click Example</title>
+    </head>
+    <body style="background:#ffffff">
+        <h2> My First <Button> Click</h2>
 
-  <h2>Enter Your Name</h2>
+            <button onclick="showMessage()">Click Me!</button>
 
-  <form id="myForm">
-    <input type="text" id="nameInput" placeholder="Your name">
-    <input type="submit" value="Submit">
-  </form>
+            <p id="demo"></p>
 
-  <p id="result"></p>
-
-  <script>
-    document.getElementbyId("myForm").addEventListener("submit"), function(event)
-    event.preventDefault(); // Stops the form from refreshing the page 
-    let name = document.getElementById("nameInput").value;
-    document.getElementById("result").innerHTML = "Hello," + name + name "
-  </script>
-
-</body>
-</html>
+            <script>
+              function.showMessage() { document.getElementById("demo").innerHTML = "Hello, clicked the button!";
+            </script>
+        }
+            </body>
+            </html>
